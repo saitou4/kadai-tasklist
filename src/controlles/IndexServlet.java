@@ -36,7 +36,7 @@ public class IndexServlet extends HttpServlet {
         EntityManager em = DAO.createEntityManager();
 
 
-        List<DTO> tasklist = em.createNamedQuery("getAllTasklist", DTO.class)
+        List<DTO> tasklist = em.createNamedQuery("getAllDTO", DTO.class)
                                     .getResultList();
 
 

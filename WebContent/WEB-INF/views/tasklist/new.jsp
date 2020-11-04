@@ -4,8 +4,8 @@
     <c:param name="content">
         <h2>メッセージ新規作成ページ</h2>
 
-        <form method="POST" action="${pageContext.request.contextPath}/crate">
-            <c:import url="../layout/_form.jsp"/>
+        <form method="POST" action="${pageContext.request.contextPath}/create">
+            <c:import url="_form.jsp"/>
         </form>
 
         <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
