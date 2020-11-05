@@ -17,7 +17,7 @@ import javax.persistence.Table;
             name  ="getAllDTO",
             query ="SELECT m FROM DTO AS m ORDER BY m.id DESC")
 })
-@Table(name = "tasklist")
+@Table(name = "task")
 
 public class DTO {
     @Id

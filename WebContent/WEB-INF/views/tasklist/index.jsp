@@ -4,14 +4,18 @@
     <c:param name="content">
         <h2>タスクリスト一覧</h2>
         <ul>
-            <c:forEach var="tasklist" items="${tasklist}">
+            <c:forEach var="task" items="${task}">
                 <li>
-                    <a href="${pageContext.request.contextPath}/show?id=${tasklist.id}">
-                        <c:out value="${tasklist.id}"/>
+                    <a href="${pageContext.request.contextPath}/show?id=${task.id}">
+                        <c:out value="${task.id}"/>
                     </a>
-                    :<c:out value="${tasklist.title}"></c:out> &gt; <c:out value="${tasklist.content}"/>
+                    :<c:out value="${task.title}"></c:out> &gt; <c:out value="${task.content}"/>
                 </li>
             </c:forEach>
         </ul>
+
+        <p><a href="${pageContext.request.contextPath}/new">タスク新規作成</a></p>
+
+
     </c:param>
 </c:import>

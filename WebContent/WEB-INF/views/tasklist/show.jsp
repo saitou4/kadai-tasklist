@@ -4,12 +4,12 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
 
-        <h2>id : ${tasklist.id}のメッセージ詳細ページ</h2>
+        <h2>id : ${tasklist.id}のタスク詳細ページ</h2>
 
-        <p>タイトル　：<c:out value="${tasklist.title}"/></p>
-        <p>メッセージ　：<c:out value="${tasklist.content}"/></p>
-        <p>作成日時　:<fmt:formatDate value="${tasklist.created_at}"/></p>
-        <p>更新日時　：<fmt:formatDate value="${tasklist.updated_at}"/></p>
+        <p>タイトル　：<c:out value="${task.title}"/></p>
+        <p>タスク　：<c:out value="${task.content}"/></p>
+        <p>作成日時　:<fmt:formatDate value="${task.created_at}"/></p>
+        <p>更新日時　：<fmt:formatDate value="${task.updated_at}"/></p>
 
         <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
         <p><a href="${pageContext.request.contextPath}/edit?id=${tasklist.id}">編集する</a></p>

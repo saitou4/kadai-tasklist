@@ -36,14 +36,14 @@ public class DestroyServlet extends HttpServlet {
         if(_token != null && _token.equals(request.getSession().getId())){
             EntityManager em = DAO.createEntityManager();
 
-            DTO m = em.find(DTO.class,(Integer)(request.getSession().getAttribute("tasklist_id")));
+            DTO m = em.find(DTO.class,(Integer)(request.getSession().getAttribute("task_id")));
 
             em.getTransaction().begin();
             em.remove(m);
             em.getTransaction().commit();
             em.close();
 
-            request.getSession().removeAttribute("tasklist_id");
+            request.getSession().removeAttribute("task_id");
 
             response.sendRedirect(request.getContextPath() + "/index");
 
