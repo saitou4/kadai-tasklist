@@ -4,14 +4,14 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
 
-        <h2>id : ${tasklist.id}のタスク詳細ページ</h2>
+        <h2>id : ${tasks.id}のタスク詳細ページ</h2>
 
-        <p>タイトル　：<c:out value="${task.title}"/></p>
-        <p>タスク　：<c:out value="${task.content}"/></p>
-        <p>作成日時　:<fmt:formatDate value="${task.created_at}"/></p>
-        <p>更新日時　：<fmt:formatDate value="${task.updated_at}"/></p>
+        <p>タイトル　：<c:out value="${tasks.title}"/></p>
+        <p>タスク　：<c:out value="${tasks.content}"/></p>
+        <p>作成日時　:<fmt:formatDate value="${tasks.created_at}"/></p>
+        <p>更新日時　：<fmt:formatDate value="${tasks.updated_at}"/></p>
 
         <p><a href="${pageContext.request.contextPath}/index">一覧に戻る</a></p>
-        <p><a href="${pageContext.request.contextPath}/edit?id=${task.id}">編集する</a></p>
+        <p><a href="${pageContext.request.contextPath}/edit?id=${tasks.id}">編集する</a></p>
     </c:param>
 </c:import>

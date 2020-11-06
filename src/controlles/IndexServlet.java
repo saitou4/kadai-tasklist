@@ -36,13 +36,13 @@ public class IndexServlet extends HttpServlet {
         EntityManager em = DAO.createEntityManager();
 
 
-        List<DTO> task = em.createNamedQuery("getAllDTO", DTO.class)
+        List<DTO> tasks = em.createNamedQuery("getAllDTO", DTO.class)
                                     .getResultList();
 
 
         em.close();
 
-        request.setAttribute("task",task );
+        request.setAttribute("tasks",tasks );
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasklist/index.jsp");
         rd.forward(request, response);
